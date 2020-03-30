@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>flink-learning</artifactId>
+        <groupId>com.zhisheng.flink</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>flink-learning-connectors</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>flink-learning-connectors-es6</module>
+        <module>flink-learning-connectors-kafka</module>
+        <module>flink-learning-connectors-cassandra</module>
+        <module>flink-learning-connectors-mysql</module>
+        <module>flink-learning-connectors-rabbitmq</module>
+        <module>flink-learning-connectors-hdfs</module>
+        <module>flink-learning-connectors-hbase</module>
+        <module>flink-learning-connectors-rocketmq</module>
+        <module>flink-learning-connectors-redis</module>
+        <module>flink-learning-connectors-flume</module>
+        <module>flink-learning-connectors-influxdb</module>
+        <module>flink-learning-connectors-activemq</module>
+        <module>flink-learning-connectors-netty</module>
+        <module>flink-learning-connectors-akka</module>
+        <module>flink-learning-connectors-kudu</module>
+        <module>flink-learning-connectors-clickhouse</module>
+        <module>flink-learning-connectors-es2</module>
+        <module>flink-learning-connectors-es5</module>
+        <module>flink-learning-connectors-es7</module>
+        <module>flink-learning-connectors-hive</module>
+        <module>flink-learning-connectors-gcp-pubsub</module>
+        <module>flink-learning-connectors-nifi</module>
+        <module>flink-learning-connectors-pulsar</module>
+        <!--<module>flink-learning-connectors-kinesis</module>-->
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.zhisheng.flink</groupId>
+            <artifactId>flink-learning-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
