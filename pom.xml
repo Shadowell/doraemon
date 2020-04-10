@@ -78,7 +78,6 @@
 		<compiler.target.version>${java.version}</compiler.target.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<scala.macros.version>2.1.0</scala.macros.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
