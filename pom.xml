@@ -9,9 +9,13 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module>flink-unity-common</module>
-        <module>flink-unity-core</module>
-        <module>flink-unity-examples</module>
+        <module>doraemon-common</module>
+        <module>doraemon-core</module>
+        <module>doraemon-doc</module>
+         <module>doraemon-kafka</module>
+        <module>doraemon-flink</module>
+        <module>doraemon-spark</module>
+        <module>doraemon-pytorch</module>
     </modules>
 
     <properties>

@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>flink-unity</artifactId>
-        <groupId>com.unity.flink</groupId>
+        <artifactId>org.shadowell</artifactId>
+        <groupId>doraemon</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>flink-unity-common</artifactId>
+    <artifactId>doraemon-flink</artifactId>
 
     <dependencies>
         <!--工具包依赖-->
