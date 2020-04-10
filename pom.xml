@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module>doraemon-common</module>
         <module>doraemon-core</module>
         <module>doraemon-docs</module>
          <module>doraemon-kafka</module>
