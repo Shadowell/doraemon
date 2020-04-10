@@ -1,0 +1,33 @@
+rule:
+  # Rule File的配置
+  file:
+    ruleFilePath: src/main/resources/rules
+    ruleFileName: rule_07.json
+  # TiDB的配置
+  tiDB:
+    driverName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.25.74.37:3306/ceshi?autoReconnect=true
+    username: root
+    password: 123456
+
+# 数据源source配置
+source:
+  kafka:
+    brokerList: 30.16.45.152:9092,30.16.45.155:9092,30.16.45.156:9092
+    topic: login-event-in
+
+# 数据源sink的配置
+sink:
+  kafka:
+    brokerList: 30.16.45.152:9092,30.16.45.155:9092,30.16.45.156:9092"
+    topic: login-event-out
+
+# Flink的配置
+engine:
+  flink:
+    flinkHome: /usr/app/flink
+    checkpointPath: hdfs://30.18.106.39:9000/user/flink/checkpoints/rule_engine_test
+    parallelism: 4
+    jarPath: src/main/resources/jars
+    jarName: flink-application-template.jar
+

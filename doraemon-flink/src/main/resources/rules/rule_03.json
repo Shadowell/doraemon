@@ -1,0 +1,11 @@
+{
+    "strategyID": "000001",
+    "version": "1.0.0",
+    "status": 0,
+    "group": [
+        {
+            "desc": "规则描述1",
+            "rule": "Pattern.begin(\"start\").where(\"userId==1\" and \"type==fail\").next(\"next\").where(\"userId==1\" and \"type==success\").within(Time.seconds(3))"
+        }
+    ]
+}

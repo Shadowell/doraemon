@@ -11,7 +11,7 @@
     <modules>
         <module>doraemon-common</module>
         <module>doraemon-core</module>
-        <module>doraemon-doc</module>
+        <module>doraemon-docs</module>
          <module>doraemon-kafka</module>
         <module>doraemon-flink</module>
         <module>doraemon-spark</module>

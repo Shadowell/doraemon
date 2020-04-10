@@ -1,0 +1,18 @@
+[
+    {
+        "conditionType": 2,
+        "eventType": 2,
+        "timeWindow": "1h",
+        "eventName": "HCZ_H3000036",
+        "sequence": [
+            {
+                "eventName": "PAXC_H00018702",
+                "time": "1h"
+            },
+            {
+                "eventName": "PAXC_H00018703",
+                "time": "1h"
+            }
+        ]
+    }
+]

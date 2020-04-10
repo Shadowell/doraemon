@@ -1,0 +1,144 @@
+[
+    {
+        "strategy_id": "0001",
+        "ruleName": "规则名称1",
+        "version": "规则版本号",
+        "status": "规则状态",
+        "event_interval": 30,
+        "rules": [
+            {
+                "id": "start",
+                "combine": "begin",
+                "conditions": [
+                    [
+                        {
+                            "fieldName": "price",
+                            "operator": ">",
+                            "threshold": "100"
+                        },
+                        {
+                            "fieldName": "departID",
+                            "operator": "=",
+                            "threshold": "paic"
+                        },
+                        {
+                            "fieldName": "count",
+                            "operator": "<=",
+                            "threshold": "200"
+                        }
+                    ]
+                ],
+                "quantifier": { //可以改成list
+                    "type": "optional",
+                    "value": ""
+                },
+                "joiners": ["&&", "&&", "||"],//可放到conditions内部
+                "actions": [
+
+                ]
+            },
+            {
+                "id": "middle",
+                "combine": "next",
+                "conditions": [
+                    [
+                        {
+                            "fieldName": "price",
+                            "operator": ">",
+                            "threshold": "100"
+                        },
+                        {
+                            "fieldName": "departID",
+                            "operator": "=",
+                            "threshold": "paic"
+                        },
+                        {
+                            "fieldName": "goodCount",
+                            "operator": "<=",
+                            "threshold": "200"
+                        }
+                    ]
+                ],
+                "qualifiers": {
+                    "type": "times",
+                    "value": "3"
+                },
+                "joiner": ["&&", "&&", "||"],
+                "actions": [
+
+                ]
+            }
+        ]
+    },
+    {
+        "strategy_id": "0002",
+        "ruleName": "规则名称2",
+        "version": "规则版本号",
+        "status": "规则状态",
+        "event_interval": 30,
+        "rules": [
+            {
+                "id": "start",
+                "combine": "begin",
+                "conditions": [
+                    [
+                        {
+                            "fieldName": "price",
+                            "operator": ">",
+                            "threshold": "100"
+                        },
+                        {
+                            "fieldName": "departID",
+                            "operator": "=",
+                            "threshold": "paic"
+                        },
+                        {
+                            "fieldName": "count",
+                            "operator": "<=",
+                            "threshold": "200"
+                        }
+                    ]
+                ],
+                "quantifier": { //可以改成list
+                    "type": "optional",
+                    "value": ""
+                },
+                "joiners": ["&&", "&&", "||"],//可放到conditions内部
+                "actions": [
+
+                ]
+            },
+            {
+                "id": "middle",
+                "combine": "next",
+                "conditions": [
+                    [
+                        {
+                            "fieldName": "price",
+                            "operator": ">",
+                            "threshold": "100"
+                        },
+                        {
+                            "fieldName": "departID",
+                            "operator": "=",
+                            "threshold": "paic"
+                        },
+                        {
+                            "fieldName": "goodCount",
+                            "operator": "<=",
+                            "threshold": "200"
+                        }
+                    ]
+                ],
+                "qualifiers": {
+                    "type": "times",
+                    "value": "3"
+                },
+                "joiner": ["&&", "&&", "||"],
+                "actions": [
+
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,66 @@
+{
+    "strategy_id": "0001",
+    "ruleName": "规则名称",
+    "version": "规则版本号",
+    "status": "规则状态",
+    "event_interval": "30",
+    "rules": [
+        {
+            "id": "start",
+            "combine": "begin",
+            "conditions": [
+                [
+                    {
+                        "fieldName": "price",
+                        "operator": ">",
+                        "threshold": "100"
+                    },
+                    {
+                        "fieldName": "departID",
+                        "operator": "=",
+                        "threshold": "paic"
+                    }
+                ],
+                [
+                    {
+                        "fieldName": "count",
+                        "operator": "<=",
+                        "threshold": "200"
+                    }
+                ]
+            ],
+            "quantifiers": {
+                "times": "1,2"
+            },
+            "joiner": ["&&", "&&", "||"]
+        },
+        {
+            "id": "middle",
+            "combine": "next/followedBy/followedByAny/notFollowedBy/",
+            "conditions": [
+                [
+                    {
+                        "fieldName": "price",
+                        "operator": ">",
+                        "threshold": "100"
+                    },
+                    {
+                        "fieldName": "departID",
+                        "operator": "=",
+                        "threshold": "paic"
+                    }
+                ],
+                [
+                    {
+                        "fieldName": "goodCount",
+                        "operator": "<=",
+                        "threshold": "200"
+                    }
+                ]
+            ],
+            "qualifiers": {
+                "times": "3"
+            }
+        }
+    ]
+}

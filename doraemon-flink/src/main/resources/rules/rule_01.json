@@ -1,0 +1,22 @@
+{
+    "strategyID": "000001",
+    "version": "1.0.0",
+    "status": 0,
+    "data" : {
+        "group": [
+            {
+                "desc": "规则描述",
+                "rule": [
+                    {
+                        "factor": "price",
+                        "operator": "<=",
+                        "threshold": "50"
+                    }
+                ]
+            },
+          {
+
+          }
+        ]
+    }
+}
