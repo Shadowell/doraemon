@@ -37,6 +37,7 @@
         <module>doraemon-core</module>
         <module>doraemon-docs</module>
 		<module>doraemon-kafka</module>
+		<module>doraemon-kafka</module>
         <module>doraemon-flink</module>
         <module>doraemon-spark</module>
         <module>doraemon-pytorch</module>
