@@ -1,7 +1,7 @@
-package com.paic.app.core;
+package com.shadowell.doraemon.flink.core;
 
-import com.paic.common.conf.KafkaOptions;
-import com.paic.app.config.KafkaConfig;
+import com.shadowell.doraemon.flink.config.KafkaConfig;
+import com.shadowell.doraemon.flink.config.KafkaOptions;
 
 import java.util.Properties;
 

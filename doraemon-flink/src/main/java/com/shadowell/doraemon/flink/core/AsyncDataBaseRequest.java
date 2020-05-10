@@ -1,4 +1,4 @@
-//package com.paic.app.core;
+//package com.shadowell.doraemon.flink.core;
 //
 //import com.paic.app.entity.LoginEvent;
 //import com.paic.app.entity.RulesEntity;

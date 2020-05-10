@@ -1,4 +1,4 @@
-package com.paic.app.entity;
+package com.shadowell.doraemon.flink.entity;
 
 public class LoginEvent {
     private String userId;

@@ -1,6 +1,6 @@
-package com.paic.app.entity;
+package com.shadowell.doraemon.flink.entity;
 
-import com.paic.app.core.Conditions;
+import com.shadowell.doraemon.flink.core.Conditions;
 
 /**
  * Author: Jie Feng

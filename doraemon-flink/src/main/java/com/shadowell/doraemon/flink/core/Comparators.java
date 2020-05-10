@@ -1,4 +1,4 @@
-package com.paic.app.core;
+package com.shadowell.doraemon.flink.core;
 
 /**
  * Author: Jie Feng

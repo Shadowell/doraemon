@@ -24,8 +24,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import static org.apache.flink.util.Preconditions.checkArgument;
-import static org.apache.flink.util.Preconditions.checkNotNull;
+import static com.shadowell.doraemon.core.util.Preconditions.checkArgument;
+import static com.shadowell.doraemon.core.util.Preconditions.checkNotNull;
+
 
 /**
  * Collection of utilities about time intervals.

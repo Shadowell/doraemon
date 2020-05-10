@@ -1,10 +1,10 @@
-package com.paic.engine;
+package com.shadowell.doraemon.flink;
 
-import com.paic.app.config.FileConfig;
-import com.paic.app.config.FlinkConfig;
-import com.paic.engine.core.Submit;
-import com.paic.app.core.YamlBuilder;
-import com.paic.app.entity.YamlParameters;
+import com.shadowell.doraemon.flink.config.FileConfig;
+import com.shadowell.doraemon.flink.config.FlinkConfig;
+import com.shadowell.doraemon.flink.core.Submit;
+import com.shadowell.doraemon.flink.core.YamlBuilder;
+import com.shadowell.doraemon.flink.entity.YamlParameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,9 +1,8 @@
-package com.paic.app.core;
+package com.shadowell.doraemon.flink.core;
 
-import com.paic.app.entity.OperatorDescriptor;
-import com.paic.app.entity.Quantifier;
-import com.paic.app.entity.RuleUnit;
-import com.paic.app.entity.RulesEntity;
+import com.shadowell.doraemon.flink.entity.OperatorDescriptor;
+import com.shadowell.doraemon.flink.entity.Quantifier;
+import com.shadowell.doraemon.flink.entity.RuleUnit;
 import org.apache.flink.cep.pattern.Pattern;
 import org.apache.flink.cep.pattern.conditions.IterativeCondition;
 import org.slf4j.Logger;

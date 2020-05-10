@@ -20,7 +20,8 @@ package com.shadowell.doraemon.core.util;
 
 import org.slf4j.Logger;
 
-import static org.apache.flink.util.Preconditions.checkNotNull;
+import static com.shadowell.doraemon.core.util.Preconditions.checkNotNull;
+
 
 /**
  * Utils class for dealing with JVM shutdown hooks.

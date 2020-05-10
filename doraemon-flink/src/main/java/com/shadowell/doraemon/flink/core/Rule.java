@@ -1,15 +1,14 @@
-package com.paic.app.core;
+package com.shadowell.doraemon.flink.core;
 
-import com.paic.app.entity.OperatorDescriptor;
-import com.paic.app.entity.Quantifier;
-import com.paic.app.entity.RuleUnit;
-import com.paic.app.sources.TiDBSource;
-import com.paic.common.utils.JsonUtil;
-import com.paic.app.config.FileConfig;
-import com.paic.app.config.TiDBConfig;
-import com.paic.app.entity.RulesEntity;
+import com.shadowell.doraemon.flink.config.FileConfig;
+import com.shadowell.doraemon.flink.config.TiDBConfig;
+import com.shadowell.doraemon.flink.entity.OperatorDescriptor;
+import com.shadowell.doraemon.flink.entity.Quantifier;
+import com.shadowell.doraemon.flink.entity.RuleUnit;
+import com.shadowell.doraemon.flink.entity.RulesEntity;
+import com.shadowell.doraemon.flink.sources.TiDBSource;
+import com.shadowell.doraemon.flink.utils.JsonUtil;
 import org.apache.flink.cep.pattern.Pattern;
-import org.apache.flink.streaming.api.windowing.time.Time;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

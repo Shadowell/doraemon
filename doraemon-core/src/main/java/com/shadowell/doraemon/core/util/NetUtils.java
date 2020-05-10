@@ -18,8 +18,8 @@
 
 package com.shadowell.doraemon.core.util;
 
-import org.apache.flink.annotation.Internal;
-import org.apache.flink.configuration.IllegalConfigurationException;
+import com.shadowell.doraemon.core.annotation.Internal;
+import com.sun.org.apache.xalan.internal.xsltc.dom.UnionIterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import sun.net.util.IPAddressUtil;
@@ -166,7 +166,7 @@ public class NetUtils {
 				Preconditions.checkArgument(!host.endsWith("."));
 				Preconditions.checkArgument(!host.contains(":"));
 			} catch (Exception e) {
-				throw new IllegalConfigurationException("The configured hostname is not valid", e);
+				throw new IllegalArgumentException("The configured hostname is not valid", e);
 			}
 		}
 
@@ -317,70 +317,6 @@ public class NetUtils {
 		}
 		buf.append(']');
 		return buf.toString();
-	}
-
-	// ------------------------------------------------------------------------
-	//  Port range parsing
-	// ------------------------------------------------------------------------
-
-	/**
-	 * Returns an iterator over available ports defined by the range definition.
-	 *
-	 * @param rangeDefinition String describing a single port, a range of ports or multiple ranges.
-	 * @return Set of ports from the range definition
-	 * @throws NumberFormatException If an invalid string is passed.
-	 */
-	public static Iterator<Integer> getPortRangeFromString(String rangeDefinition) throws NumberFormatException {
-		final String[] ranges = rangeDefinition.trim().split(",");
-
-		UnionIterator<Integer> iterators = new UnionIterator<>();
-
-		for (String rawRange: ranges) {
-			Iterator<Integer> rangeIterator;
-			String range = rawRange.trim();
-			int dashIdx = range.indexOf('-');
-			if (dashIdx == -1) {
-				// only one port in range:
-				final int port = Integer.valueOf(range);
-				if (!isValidHostPort(port)) {
-					throw new IllegalConfigurationException("Invalid port configuration. Port must be between 0" +
-						"and 65535, but was " + port + ".");
-				}
-				rangeIterator = Collections.singleton(Integer.valueOf(range)).iterator();
-			} else {
-				// evaluate range
-				final int start = Integer.valueOf(range.substring(0, dashIdx));
-				if (!isValidHostPort(start)) {
-					throw new IllegalConfigurationException("Invalid port configuration. Port must be between 0" +
-						"and 65535, but was " + start + ".");
-				}
-				final int end = Integer.valueOf(range.substring(dashIdx + 1, range.length()));
-				if (!isValidHostPort(end)) {
-					throw new IllegalConfigurationException("Invalid port configuration. Port must be between 0" +
-						"and 65535, but was " + end + ".");
-				}
-				rangeIterator = new Iterator<Integer>() {
-					int i = start;
-					@Override
-					public boolean hasNext() {
-						return i <= end;
-					}
-
-					@Override
-					public Integer next() {
-						return i++;
-					}
-
-					@Override
-					public void remove() {
-						throw new UnsupportedOperationException("Remove not supported");
-					}
-				};
-			}
-			iterators.add(rangeIterator);
-		}
-
-		return iterators;
 	}
 
 	/**

@@ -1,4 +1,4 @@
-package com.paic.common.utils;
+package com.shadowell.doraemon.flink.utils;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -26,9 +26,11 @@
 
 package com.shadowell.doraemon.core.util;
 
-import org.apache.flink.annotation.Internal;
+
+import com.shadowell.doraemon.core.annotation.Internal;
 
 import javax.annotation.Nullable;
+
 
 /**
  * A collection of static utility methods to validate input.

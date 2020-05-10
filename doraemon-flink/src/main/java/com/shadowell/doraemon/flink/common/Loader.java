@@ -1,7 +1,5 @@
-package com.paic.app.common;
+package com.shadowell.doraemon.flink.common;
 
-import com.paic.app.core.ActionsPattern;
-import com.paic.app.core.ConditionsPattern;
 
 /**
  * Author: Jie Feng

@@ -1,6 +1,7 @@
-package com.paic.app.entity;
+package com.shadowell.doraemon.flink.entity;
 
-import com.paic.app.core.Comparators;
+
+import com.shadowell.doraemon.flink.core.Comparators;
 
 /**
  * Author: Jie Feng

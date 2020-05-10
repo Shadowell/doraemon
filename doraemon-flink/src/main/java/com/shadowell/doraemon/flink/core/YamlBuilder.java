@@ -1,8 +1,7 @@
-package com.paic.app.core;
+package com.shadowell.doraemon.flink.core;
 
-import com.paic.app.entity.YamlParameters;
-import org.omg.CORBA.PUBLIC_MEMBER;
-import org.yaml.snakeyaml.Yaml;
+import com.shadowell.doraemon.flink.entity.YamlParameters;
+import org.apache.flink.shaded.jackson2.org.yaml.snakeyaml.Yaml;
 
 import java.io.File;
 import java.io.FileInputStream;

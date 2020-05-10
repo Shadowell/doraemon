@@ -1,8 +1,7 @@
-package com.paic.engine.core;
+package com.shadowell.doraemon.flink.core;
 
-import com.paic.common.core.Executor;
-import com.paic.app.config.FlinkConfig;
-import com.paic.app.entity.YamlParameters;
+import com.shadowell.doraemon.flink.config.FlinkConfig;
+import com.shadowell.doraemon.flink.entity.YamlParameters;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

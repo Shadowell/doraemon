@@ -1,4 +1,4 @@
-package com.paic.common.core;
+package com.shadowell.doraemon.flink.core;
 
 import javax.annotation.Nullable;
 

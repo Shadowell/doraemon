@@ -1,9 +1,10 @@
-package com.paic.app.entity;
+package com.shadowell.doraemon.flink.entity;
 
-import com.paic.app.config.EngineConfig;
-import com.paic.app.config.RuleConfig;
-import com.paic.app.config.SinkConfig;
-import com.paic.app.config.SourceConfig;
+
+import com.shadowell.doraemon.flink.config.EngineConfig;
+import com.shadowell.doraemon.flink.config.RuleConfig;
+import com.shadowell.doraemon.flink.config.SinkConfig;
+import com.shadowell.doraemon.flink.config.SourceConfig;
 
 /**
  * Author: Jie Feng

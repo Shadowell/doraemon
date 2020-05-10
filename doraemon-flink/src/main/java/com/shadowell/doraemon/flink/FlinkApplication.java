@@ -1,15 +1,15 @@
-package com.paic.app;
+package com.shadowell.doraemon.flink;
 
-import com.paic.app.config.TiDBConfig;
-import com.paic.app.core.*;
-import com.paic.app.entity.LoginEvent;
-import com.paic.app.entity.LoginWarning;
-import com.paic.app.config.FileConfig;
-import com.paic.app.config.FlinkConfig;
-import com.paic.app.config.KafkaConfig;
-import com.paic.app.entity.RulesEntity;
-import com.paic.app.entity.YamlParameters;
-import org.apache.flink.api.java.utils.ParameterTool;
+import com.shadowell.doraemon.flink.config.FlinkConfig;
+import com.shadowell.doraemon.flink.config.KafkaConfig;
+import com.shadowell.doraemon.flink.config.TiDBConfig;
+import com.shadowell.doraemon.flink.core.ActionsPattern;
+import com.shadowell.doraemon.flink.core.Rule;
+import com.shadowell.doraemon.flink.core.YamlBuilder;
+import com.shadowell.doraemon.flink.entity.LoginEvent;
+import com.shadowell.doraemon.flink.entity.LoginWarning;
+import com.shadowell.doraemon.flink.entity.RulesEntity;
+import com.shadowell.doraemon.flink.entity.YamlParameters;
 import org.apache.flink.cep.CEP;
 import org.apache.flink.cep.PatternStream;
 import org.apache.flink.cep.pattern.Pattern;

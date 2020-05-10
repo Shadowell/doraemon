@@ -8,7 +8,7 @@
 		<version>7</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-    <groupId>org.shadowell</groupId>
+    <groupId>com.shadowell</groupId>
     <artifactId>doraemon</artifactId>
 	<name>${project.artifactId}</name>
     <packaging>pom</packaging>
@@ -36,7 +36,6 @@
     <modules>
         <module>doraemon-core</module>
         <module>doraemon-docs</module>
-		<module>doraemon-kafka</module>
 		<module>doraemon-kafka</module>
         <module>doraemon-flink</module>
         <module>doraemon-spark</module>
@@ -67,6 +66,7 @@
 		<kafa.version>2.2.0</kafa.version>
 		<spark.version>2.2.1</spark.version>
 
+		<findbugs.version>3.0.1</findbugs.version>
 		<junit.version>4.12</junit.version>
 
 		<skipTests>false</skipTests>
@@ -87,12 +87,6 @@
 		<dependencies>
 			<!--core dependencies-->
 			<dependency>
-				<groupId>org.apache.flink</groupId>
-				<artifactId>flink-streaming-java_${scala.binary.version}</artifactId>
-				<version>${flink.version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
 				<groupId>org.apache.curator</groupId>
 				<artifactId>curator-framework</artifactId>
 				<version>${curator.version}</version>
@@ -106,6 +100,21 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>io.grpc</groupId>
@@ -162,6 +171,11 @@
 			</dependency>
 			<dependency>
 				<groupId>org.apache.flink</groupId>
+				<artifactId>flink-core</artifactId>
+				<version>${flink.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.flink</groupId>
 				<artifactId>flink-clients_${scala.binary.version}</artifactId>
 				<version>${flink.version}</version>
 			</dependency>
@@ -197,12 +211,17 @@
 			</dependency>
 			<dependency>
 				<groupId>org.apache.flink</groupId>
-				<artifactId>flink-core</artifactId>
+				<artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>
 				<version>${flink.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.flink</groupId>
-				<artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>
+				<artifactId>flink-statebackend-rocksdb_${scala.binary.version}</artifactId>
+				<version>${flink.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.flink</groupId>
+				<artifactId>flink-cep_${scala.binary.version}</artifactId>
 				<version>${flink.version}</version>
 			</dependency>
 
@@ -233,6 +252,11 @@
 				<version>${httpclient.version}</version>
 			</dependency>
 
+			<dependency>
+				<groupId>com.google.code.findbugs</groupId>
+				<artifactId>jsr305</artifactId>
+				<version>${findbugs.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>junit</groupId>
 				<artifactId>junit</artifactId>
@@ -294,26 +318,26 @@
 							</execution>
 						</executions>
 					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-checkstyle-plugin</artifactId>
-						<version>3.0.0</version>
-						<executions>
-							<execution>
-								<id>validate</id>
-								<phase>validate</phase>
-								<configuration>
-									<configLocation>/tools/maven/checkstyle.xml</configLocation>
-									<encoding>UTF-8</encoding>
-									<consoleOutput>true</consoleOutput>
-									<failsOnError>true</failsOnError>
-								</configuration>
-								<goals>
-									<goal>check</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
+<!--					<plugin>-->
+<!--						<groupId>org.apache.maven.plugins</groupId>-->
+<!--						<artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--						<version>3.0.0</version>-->
+<!--						<executions>-->
+<!--							<execution>-->
+<!--								<id>validate</id>-->
+<!--								<phase>validate</phase>-->
+<!--								<configuration>-->
+<!--									<configLocation>/tools/maven/checkstyle.xml</configLocation>-->
+<!--									<encoding>UTF-8</encoding>-->
+<!--									<consoleOutput>true</consoleOutput>-->
+<!--									<failsOnError>true</failsOnError>-->
+<!--								</configuration>-->
+<!--								<goals>-->
+<!--									<goal>check</goal>-->
+<!--								</goals>-->
+<!--							</execution>-->
+<!--						</executions>-->
+<!--					</plugin>-->
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>

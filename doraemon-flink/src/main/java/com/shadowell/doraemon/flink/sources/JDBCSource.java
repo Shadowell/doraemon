@@ -1,4 +1,4 @@
-package com.paic.app.sources;
+package com.shadowell.doraemon.flink.sources;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

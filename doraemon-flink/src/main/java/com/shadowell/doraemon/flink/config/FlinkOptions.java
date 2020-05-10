@@ -1,4 +1,4 @@
-package com.paic.common.conf;
+package com.shadowell.doraemon.flink.conf;
 
 /**
  * Author: Jie Feng

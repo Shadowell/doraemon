@@ -1,6 +1,7 @@
-package com.paic.app.sources;
+package com.shadowell.doraemon.flink.sources;
 
-import com.paic.app.config.TiDBConfig;
+import com.shadowell.doraemon.flink.config.TiDBConfig;
+
 import java.sql.*;
 
 /**
