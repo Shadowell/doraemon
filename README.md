@@ -8,6 +8,7 @@ This project focuses on big data technology and artificial intelligence technolo
 - [doraemon-spark](#Spark related)
 - [doraemon-flink](#Flink related)
 - [doraemon-pytorch](#Pytorch related)
+- [doraemon-tensorflow](#Tensorflow related)
 - [doraemon-doc](#Docs related)
 
 ## Components
@@ -31,6 +32,10 @@ Flink compenent related
 * doraemon-pytorch
 ```clojure
 Pytorch compenent related
+```
+* doraemon-tensorflow
+```clojure
+Tensorflow compenent related
 ```
 * doraemon-doc
 ```clojure
