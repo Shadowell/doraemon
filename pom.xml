@@ -64,7 +64,7 @@
 		<hadoop.version>2.7.0</hadoop.version>
 		<zookeeper.version>3.4.10</zookeeper.version>
 		<flink.version>1.10.0</flink.version>
-		<kafa.version>2.2.0</kafa.version>
+		<kafka.version>2.2.0</kafka.version>
 		<spark.version>2.2.1</spark.version>
 
 		<findbugs.version>3.0.1</findbugs.version>
@@ -169,6 +169,11 @@
 				<groupId>org.apache.hadoop</groupId>
 				<artifactId>hadoop-hdfs</artifactId>
 				<version>${hadoop.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.kafka</groupId>
+				<artifactId>kafka-clients</artifactId>
+				<version>${kafka.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.apache.flink</groupId>
