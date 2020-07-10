@@ -2,15 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
+
+	<parent>
 		<groupId>com.shadowell</groupId>
 		<artifactId>doraemon</artifactId>
         <version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>doraemon-flink</artifactId>
 	<name>${project.artifactId}</name>
+	<version>${project.parent.version}</version>
 
 	<build>
 		<plugins>
@@ -27,6 +30,12 @@
 	<packaging>jar</packaging>
 
     <dependencies>
+		<!--模块依赖-->
+		<dependency>
+			<groupId>com.shadowell</groupId>
+			<artifactId>doraemon-core</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
         <!--工具包依赖-->
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -49,7 +58,7 @@
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
 
-		<!--Big data-->
+		<!--big data-->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-clients_${scala.binary.version}</artifactId>
@@ -86,7 +95,8 @@
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-connector-kafka-0.11_${scala.binary.version}</artifactId>
 		</dependency>
-		<!--state backend-->
+
+		<!--state backend dependency-->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-statebackend-rocksdb_${scala.binary.version}</artifactId>
@@ -94,6 +104,12 @@
 		<dependency>
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-cep_${scala.binary.version}</artifactId>
+		</dependency>
+
+		<!--ai dependency-->
+		<dependency>
+			<groupId>com.alibaba.alink</groupId>
+			<artifactId>alink_core_flink-1.10_${scala.binary.version}</artifactId>
 		</dependency>
 
         <dependency>

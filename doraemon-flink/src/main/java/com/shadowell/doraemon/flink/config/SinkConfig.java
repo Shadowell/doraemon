@@ -1,5 +1,7 @@
 package com.shadowell.doraemon.flink.config;
 
+import com.shadowell.doraemon.core.connectors.kafka.KafkaConfig;
+
 /**
  * Author: Jie Feng
  * Date: Created in 2019/12/18

@@ -64,6 +64,7 @@
 		<hadoop.version>2.7.0</hadoop.version>
 		<zookeeper.version>3.4.10</zookeeper.version>
 		<flink.version>1.10.0</flink.version>
+		<alink.version>1.1.0</alink.version>
 		<kafka.version>2.2.0</kafka.version>
 		<spark.version>2.2.1</spark.version>
 
@@ -231,6 +232,13 @@
 				<version>${flink.version}</version>
 			</dependency>
 
+			<!--ai dependency-->
+			<dependency>
+    			<groupId>com.alibaba.alink</groupId>
+    			<artifactId>alink_core_flink-1.10_${scala.binary.version}</artifactId>
+    			<version>${alink.version}</version>
+			</dependency>
+
 			<!--slf4j-->
 			<dependency>
 				<groupId>org.slf4j</groupId>
@@ -257,7 +265,6 @@
 				<artifactId>httpclient</artifactId>
 				<version>${httpclient.version}</version>
 			</dependency>
-
 			<dependency>
 				<groupId>com.google.code.findbugs</groupId>
 				<artifactId>jsr305</artifactId>

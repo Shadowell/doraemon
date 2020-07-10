@@ -1,7 +1,7 @@
-package com.shadowell.doraemon.flink;
+package com.shadowell.doraemon.flink.app;
 
+import com.shadowell.doraemon.core.connectors.kafka.KafkaConfig;
 import com.shadowell.doraemon.flink.config.FlinkConfig;
-import com.shadowell.doraemon.flink.config.KafkaConfig;
 import com.shadowell.doraemon.flink.config.TiDBConfig;
 import com.shadowell.doraemon.flink.core.ActionsPattern;
 import com.shadowell.doraemon.flink.core.Rule;

@@ -1,4 +1,4 @@
-package com.shadowell.doraemon.flink;
+package com.shadowell.doraemon.flink.app;
 
 import com.shadowell.doraemon.flink.config.FileConfig;
 import com.shadowell.doraemon.flink.config.FlinkConfig;
